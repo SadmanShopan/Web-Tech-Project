@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <title>Search Doctors</title>
+    <link rel="stylesheet" type="text/css" href="../Static/css/searchDoctors.css">
+</head>
+<body>
+    <h2>Department: (selected dept)</h2>
+    <form method="post">
+       
+        <label for="search-bar">Search:</label>
+        <input type="text" id="search-bar" name="name" placeholder="Enter doctor details">
+        <select id="search-option" name="search-option">
+            
+            <option value="hospital">Search by Hospital</option>
+            <option value="name">Search by Name</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+    <table>
+        <tr>
+            <td><button onclick="location.href='department'">Back</button></td>
+            <td><button onclick="location.href='doctorsProfile'">Next</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

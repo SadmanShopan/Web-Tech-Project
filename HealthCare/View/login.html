@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../Static/css/login.css">
+    <script>
+        function validateLoginForm() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            let valid = true;
+            let message = "";
+
+            if (username === "") {
+                valid = false;
+                message += "Please enter your username.\n";
+            }
+            if (password === "") {
+                valid = false;
+                message += "Please enter your password.\n";
+            }
+
+            if (!valid) {
+                alert(message);
+            }
+            return valid;
+        }
+    </script>
+</head>
+<body>
+<form method="post" action="../Controller/loginCheck.php" onsubmit="return validateLoginForm()">
+    <table align="center">
+        <h1 align="center">Login Page</h1>
+        <tr>
+            <td><label for="username">Username:</label></td>
+            <td><input type="text" name="username" id="username"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="location.href='header.html'">Back</button></td>
+            <td><input type="submit" name="submit" value="Next" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

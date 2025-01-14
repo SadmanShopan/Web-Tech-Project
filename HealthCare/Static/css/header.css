@@ -1,0 +1,100 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Header table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header title row */
+table tr:first-child {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+table tr:first-child td {
+    padding: 15px;
+    position: relative;
+}
+
+/* User icon */
+table tr:first-child img {
+    border-radius: 50%;
+    float: right;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+    background: white;
+}
+
+/* Navigation row */
+table tr:nth-child(2) {
+    background: #2c3e50;
+}
+
+table tr:nth-child(2) td {
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #34495e;
+}
+
+table tr:nth-child(2) td:last-child {
+    border-right: none;
+}
+
+/* Buttons inside navigation */
+button {
+    background: #1abc9c;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+button:hover {
+    background: #16a085;
+    transform: scale(1.05);
+}
+
+/* Footer section (if applicable) */
+table:nth-child(2) {
+    height: calc(100% - 150px); /* Adjusts height based on header height */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table tr:first-child td {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    table tr:nth-child(2) td {
+        padding: 5px;
+    }
+
+    table tr:first-child img {
+        width: 30px;
+        height: 30px;
+    }
+}
